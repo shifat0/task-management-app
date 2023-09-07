@@ -1,14 +1,13 @@
 import React from "react";
 import Header from "../Header/Header";
-import CreateTask from "../CreateTask/CreateTask";
 
-const Home = () => {
+const Profile = () => {
   return (
     <div>
       <Header />
-      <CreateTask />
+      Profile
     </div>
   );
 };
 
-export default Home;
+export default Profile;
