@@ -26,6 +26,7 @@ const CreateTask = () => {
 
     localStorage.setItem("task", JSON.stringify(taskList));
     setShowModal(false);
+    window.location.reload();
   };
 
   const handleBlur = (e) => {

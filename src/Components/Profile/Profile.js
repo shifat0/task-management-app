@@ -24,6 +24,16 @@ const Profile = () => {
             padding: "3rem",
           }}
         >
+          <Card.Img
+            variant="top"
+            style={{
+              width: "100px",
+              height: "100px",
+              borderRadius: "50%",
+              margin: "0 auto",
+            }}
+            src="https://media.istockphoto.com/id/1130884625/vector/user-member-vector-icon-for-ui-user-interface-or-profile-face-avatar-app-in-circle-design.jpg?s=612x612&w=0&k=20&c=1ky-gNHiS2iyLsUPQkxAtPBWH1BZt0PKBB1WBtxQJRE="
+          />
           <Card.Body>
             <Card.Title>Welcome, {user.name}</Card.Title>
             <Card.Text>Email: {user.email}</Card.Text>

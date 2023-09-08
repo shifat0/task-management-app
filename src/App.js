@@ -5,6 +5,7 @@ import Login from "./Components/Auth/Login/Login";
 import Home from "./Components/Home/Home";
 import ProtectedRoute from "./Components/ProtectedRoutes/ProtectedRoute";
 import Profile from "./Components/Profile/Profile";
+import TeamCollaboration from "./Components/TeamCollaboration/TeamCollaboration";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<ProtectedRoute />}>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/team-collaboration" element={<TeamCollaboration />} />
           </Route>
         </Routes>
       </Router>
