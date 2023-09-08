@@ -10,8 +10,6 @@ const CreateTask = () => {
     priority: "",
   });
 
-  console.log(task);
-
   const handleCreateTask = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
 
