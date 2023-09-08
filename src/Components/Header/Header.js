@@ -1,8 +1,14 @@
 import React from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleLogout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem("loggedIn");
+    navigate("/login");
+  };
   return (
     <div>
       <Navbar bg="primary" data-bs-theme="dark" sticky="top">
@@ -23,6 +29,9 @@ const Header = () => {
             <Nav.Link as={Link} to="/team-collaboration">
               Team Collaboration
             </Nav.Link>
+            <Button variant="danger" onClick={handleLogout}>
+              Logout
+            </Button>
           </Nav>
         </Container>
       </Navbar>

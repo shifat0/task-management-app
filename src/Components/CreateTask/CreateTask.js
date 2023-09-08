@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Container, Modal, Form } from "react-bootstrap";
 
 const CreateTask = () => {
@@ -15,7 +15,16 @@ const CreateTask = () => {
 
   const handleTask = (e) => {
     e.preventDefault();
-    localStorage.setItem("task", JSON.stringify(task));
+    let taskList;
+    if (localStorage.getItem("task") == null) {
+      taskList = [];
+    } else {
+      taskList = JSON.parse(localStorage.getItem("task"));
+    }
+
+    taskList.push(task);
+
+    localStorage.setItem("task", JSON.stringify(taskList));
     setShowModal(false);
   };
 
