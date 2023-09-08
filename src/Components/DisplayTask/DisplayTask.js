@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Container } from "react-bootstrap";
 
 const DisplayTask = () => {
-  const task = JSON.parse(localStorage.getItem("task"));
+  const [task, setTask] = useState({});
+
+  useEffect(() => {
+    const getTask = JSON.parse(localStorage.getItem("task"));
+    if (getTask) setTask(getTask);
+  }, []);
 
   return (
     <Container>
